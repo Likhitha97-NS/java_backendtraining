@@ -6,11 +6,14 @@ public class Car
     public int speed;
 
     //default
-    public Car() { speed = 10;  }
-
+    public  Car()
+    {
+        speed=10;
+    }
     //parameterized
-    public Car(int sp) {
-        speed = sp;
+    public Car(int sp)
+    {
+        speed=sp;
     }
 
 }
