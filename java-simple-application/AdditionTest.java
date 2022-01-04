@@ -4,7 +4,12 @@ public class AdditionTest
     {
         int age=10;
         float sal=20.0f;
-        double annualsal=56.6;
+        double annualSal=56.6;
         char ch='a';
+        boolean isMansger=false;
+        byte byt=10;
+        short sh=10;
+        long lng=464646464646L;
+        String nm="andraoid";
     }
 }
