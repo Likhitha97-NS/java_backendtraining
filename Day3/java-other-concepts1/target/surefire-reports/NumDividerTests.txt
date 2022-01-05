@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: NumDividerTests
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.022 s <<< FAILURE! - in NumDividerTests
+NumDividerTests.testPrecisionNumbers  Time elapsed: 0.003 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <1.9> but was: <1.909090909090909>
+	at NumDividerTests.testPrecisionNumbers(NumDividerTests.java:26)
+

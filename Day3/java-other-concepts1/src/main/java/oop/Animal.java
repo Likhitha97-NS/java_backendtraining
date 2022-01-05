@@ -1,6 +1,5 @@
 package oop;
 
-public abstract class Animal
-{
+public abstract class Animal {
     abstract public String walk();
 }

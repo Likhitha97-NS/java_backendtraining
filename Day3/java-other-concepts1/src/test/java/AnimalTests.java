@@ -3,8 +3,7 @@ import oop.Tiger;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class AnimalTests
-{
+public class AnimalTests {
     @Test
     void testAnimalObject() {
 //        Animal animal = new Animal();

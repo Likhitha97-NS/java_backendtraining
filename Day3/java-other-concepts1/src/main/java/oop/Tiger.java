@@ -1,7 +1,6 @@
 package oop;
 
-public class Tiger extends Animal implements GpsListener
-{
+public class Tiger extends Animal implements GpsListener {
     @Override
     public String walk() {
         return "Tiger is walking";
