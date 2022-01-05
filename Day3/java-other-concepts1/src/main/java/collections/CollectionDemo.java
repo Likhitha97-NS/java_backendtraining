@@ -52,11 +52,32 @@ public class CollectionDemo
        return queue;
    }
 
-   public static void main(String[] args)
-   {
-       CollectionDemo cdm=new CollectionDemo();
-       //cdm.listDemo();
-       //cdm.queueDemo();
-       cdm.setDemo();
+
+   public void mapDemo(){
+        Map<Integer,String> map=new HashMap<Integer,String>();
+        map.put(1,"abc");
+       map.put(2,"pqr");
+       map.put(3,"lmn");
+       map.put(4,"xyz");
+
+       Set<Integer> keys=map.keySet();
+       keys.forEach(key ->System.out.println("key="+key));
+       map.remove(1,"abc");
+
+       System.out.println("2 available->"+map.containsKey(2));
+       System.out.println("lmn available->"+map.containsValue("lmn"));
+       System.out.println("element available->"+map.getOrDefault(3,"none"));
+        map.forEach((k,v)->System.out.println("key="+k+"value="+v));
    }
+
+    public static void main(String[] args)
+    {
+        CollectionDemo cdm=new CollectionDemo();
+        System.out.println("-----listdemo-----");
+        cdm.listDemo();
+        System.out.println("-----queuedemo-----");
+        cdm.queueDemo();
+        System.out.println("-----setdemo-----");
+        cdm.setDemo();
+    }
 }
