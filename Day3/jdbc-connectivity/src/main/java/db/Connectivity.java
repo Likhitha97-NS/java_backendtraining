@@ -12,7 +12,7 @@ public class Connectivity {
         connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/java_training_db",
                 "root",
                 "password");
-
+        connection.setAutoCommit(false);
     }
 
     public Connection getConnection() {
