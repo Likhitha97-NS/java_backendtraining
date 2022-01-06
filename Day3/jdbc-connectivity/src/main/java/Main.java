@@ -1,7 +1,9 @@
 import db.Connectivity;
 import service.DbService;
 
+import java.sql.Date;
 import java.sql.SQLException;
+import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,7 +22,8 @@ public class Main {
             //}
 
             //service.find();
-            service.findEmployeeByName("abc");
+            //service.findEmployeeByName("abc");
+            service.txnDemo(60, "kol", Date.valueOf(LocalDate.now()), true, 1);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
 
