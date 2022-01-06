@@ -1,4 +1,8 @@
 import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -27,12 +31,36 @@ public class Main {
 
     }
 
+    public void futures() {
+        ExecutorService service = Executors.newFixedThreadPool(5);
+        Future<String> task1 = service.submit(() ->
+        {
+            //uploading images to server
+            Thread.sleep(2500);
+            return "hello world from task1";
+        });
+        Future<String> task2 = service.submit(() -> {
+            //extracting data from spreadsheet
+            Thread.sleep(5000);
+            return "hello worls from task2";
+        });
+
+        try {
+            if (!task1.isCancelled()) {
+                System.out.println("task1 completed : " + task1.get());
+            }
+            if (!task2.isCancelled()) {
+                System.out.println("task2 completed : " + task1.get());
+            }
+        } catch (InterruptedException | ExecutionException e) {
+            e.printStackTrace();
+        }
+        service.shutdown();
+    }
+
+
     public static void main(String[] args) {
         Main main = new Main();
         main.withStream();
     }
-
-
-
-
 }
