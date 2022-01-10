@@ -6,4 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class Car {
     @Autowired
     private Tempo tempo;
+
+    public void speedUp()
+    {
+        System.out.println("speeding up the car");
+
+    }
 }
