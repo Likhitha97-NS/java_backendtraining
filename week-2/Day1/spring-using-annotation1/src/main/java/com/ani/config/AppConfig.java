@@ -12,10 +12,10 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @Configuration
 public class AppConfig {
 
-    @Bean
-    public Car car() {
-        return new Car();
-    }
+   // @Bean
+   // public Car car() {
+        //return new Car();
+   // }
 
     @Bean
     public Driver driver() {
