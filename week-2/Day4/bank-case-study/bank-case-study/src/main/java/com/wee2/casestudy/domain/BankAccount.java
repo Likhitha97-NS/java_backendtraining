@@ -34,7 +34,7 @@ public class BankAccount {
         this.acHldNm = acHldNm;
     }
 
-    public Double getBalance() {
+    public double getBalance() {
         return balance;
     }
 

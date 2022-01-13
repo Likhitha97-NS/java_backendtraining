@@ -1,8 +1,8 @@
 package com.wee2.casestudy.service;
 
 import com.wee2.casestudy.domain.BankAccount;
+import com.wee2.casestudy.exception.InvalidAmountException;
 
-import javax.transaction.Transactional;
 import java.util.List;
 
 public interface BankService {
@@ -15,14 +15,11 @@ public interface BankService {
 
     boolean deActivateAccount(Long acNum);
 
-    double withdraw(Long acNum, int amt);
+    double withdraw(Long acNum, double amt) throws InvalidAmountException;
 
-    @Transactional
-    double withdraw(Long acNum, double amt);
+    double deposit(Long acNum, int amt) throws InvalidAmountException;
 
-    double deposit(Long acNum, int amt);
-
-    int transferMoney(Long srcAc, Long dstAc, int amt);
+    int transferMoney(Long srcAc, Long dstAc, int amt) throws InvalidAmountException;
 
     BankAccount findAccountByAcNum(Long acNum);
 

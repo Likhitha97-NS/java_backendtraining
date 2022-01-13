@@ -11,10 +11,10 @@ import java.util.List;
 
 @Repository
 public interface BankRepository extends JpaRepository<BankAccount, Long> {
-    @Modifying //allows to fire insert,update and delete queries
-    //@query allows just select statements
 
-    @Query(value = "update bank_account set balance= :bal where ac_num = :acNum", nativeQuery = true)
+    //@query allows just select statements
+    @Modifying //allows to fire insert,update and delete queries
+    @Query(value = "update bank_account set balance = :bal where ac_num = :acNum", nativeQuery = true)
     void withdraw(@Param("bal") double bal, @Param("acNum") Long acNum);
 
     List<BankAccount> findByAcHldNmStartingWith(String prefix);
