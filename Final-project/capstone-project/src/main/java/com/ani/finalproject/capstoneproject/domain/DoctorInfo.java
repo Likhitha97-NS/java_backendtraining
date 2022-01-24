@@ -1,29 +1,41 @@
 package com.ani.finalproject.capstoneproject.domain;
 
-import lombok.Data;
+import com.sun.istack.NotNull;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
-@Data
+@Getter
+@Setter
 @Entity
 public class DoctorInfo {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(unique = false,nullable = true)
+
+    @NotNull
+    @Column(unique = false, nullable = true)
     private String name;
 
-    @Column(unique = false,nullable = true)
+    @NotNull
+    @NotBlank
+    @Column(unique = false, nullable = true)
     private String specialization;
 
-    @Column(unique = false,nullable = false)
-    private  String hospitalNm;
 
-    @Column(unique = false,nullable = false)
+    @NotBlank
+    @Column(unique = false, nullable = false)
+    private String hospitalNm;
+
+
+    @NotBlank
+    @Column(unique = false, nullable = false)
     private String locality;
 
-    @Column(unique = false,nullable = true)
+    @Column(unique = false, nullable = true)
     private Boolean visiting;
 
 }

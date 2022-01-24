@@ -20,15 +20,15 @@ public class DoctorInfoTests {
         doctor.setName("hello");
         doctor.setSpecialization("cardiology");
         doctor.setHospitalNm("Apollo");
-        doctor.setLocality("banglore");
+        doctor.setLocality("Manglore");
         doctor.setVisiting(true);
 
         Assertions.assertEquals(10L,doctor.getId());
         Assertions.assertEquals("hello",doctor.getName());
         Assertions.assertEquals("cardiology",doctor.getSpecialization());
-        Assertions.assertEquals("Apollo",doctor.getSpecialization());
-        Assertions.assertEquals("banglore",doctor.getHospitalNm());
-        Assertions.assertEquals("true",doctor.getVisiting());
+        Assertions.assertEquals("Apollo",doctor.getHospitalNm());
+        Assertions.assertEquals("Manglore",doctor.getLocality());
+        Assertions.assertEquals(true,doctor.getVisiting());
 
     }
 }
